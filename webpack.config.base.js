@@ -19,21 +19,24 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.css$/,
-                loaders: [
-                    'style-loader',
-                    //'css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
-                    'css-loader',
-                    'postcss-loader'
-                ]
-            },
-            {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 loaders: [
                     'babel'
                 ]
             },
+            {
+                test: /\.json$/,
+                loader: 'json'
+            },
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                loader: 'url',
+                query: {
+                    limit: 10000,
+                    name: 'assets/[name].[ext]?[hash:7]'
+                }
+            }
         ],
     },
     resolve: {

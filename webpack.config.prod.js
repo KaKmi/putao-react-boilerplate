@@ -10,7 +10,17 @@ var SOURCE_MAP = true
 config.devtool = SOURCE_MAP ? 'source-map' : false
 config.output.filename = '[name].[chunkhash].js'
 config.output.chunkFilename = '[id].[chunkhash].js'
+
+
 //todo
+
+config.module.loaders.push({
+    test: /\.css$/,
+    loader:ExtractTextPlugin.extract(['style-loader'],
+        ['css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+        'postcss-loader'])
+})
+
 //config.output.publicPath ='/dist/'
 config.plugins = (config.plugins || []).concat([
     // https://github.com/glenjamin/webpack-hot-middleware#installation--usage
@@ -40,4 +50,5 @@ config.plugins = (config.plugins || []).concat([
     })
 
 ])
+console.log(config)
 module.exports =config
