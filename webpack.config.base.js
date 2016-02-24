@@ -31,11 +31,8 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|gif|svg)$/,
-                loader: 'url',
-                query: {
-                    limit: 10000,
-                    name: 'assets/[name].[ext]?[hash:7]'
-                }
+                loaders: ['url?limit=10000&name=assets/[name].[ext]?[hash:7]','image-webpack?{progressive:true, optimizationLevel: 7, bypassOnDebug:true,interlaced: false, pngquant:{quality: "65", speed: 4}}'],
+
             }
         ],
     },

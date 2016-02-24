@@ -50,5 +50,4 @@ config.plugins = (config.plugins || []).concat([
     })
 
 ])
-console.log(config)
 module.exports =config
