@@ -22,8 +22,6 @@ A boilerplate of PuTao FrontEnd
 ### Folder Structure
 ```bash
 .
-├── LICENSE
-├── Readme.md
 ├── client
 │   ├── actions
 │   ├── assets
@@ -36,11 +34,9 @@ A boilerplate of PuTao FrontEnd
 │   ├── reducers
 │   └── store
 ├── devServer.js
-├── directoryList.md
 ├── dist
 │   ├── index.html
 │   └── static
-├── mddir.js
 ├── package.json
 ├── webpack.config.base.js
 ├── webpack.config.dev.js
