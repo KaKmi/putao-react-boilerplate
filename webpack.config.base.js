@@ -19,21 +19,21 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.css$/,
-                loaders: [
-                    'style-loader',
-                    //'css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
-                    'css-loader',
-                    'postcss-loader'
-                ]
-            },
-            {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 loaders: [
                     'babel'
                 ]
             },
+            {
+                test: /\.json$/,
+                loader: 'json'
+            },
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                loaders: ['url?limit=10000&name=assets/[name].[ext]?[hash:7]','image-webpack?{progressive:true, optimizationLevel: 7, bypassOnDebug:true,interlaced: false, pngquant:{quality: "65", speed: 4}}'],
+
+            }
         ],
     },
     resolve: {

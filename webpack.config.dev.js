@@ -10,6 +10,13 @@ Object.keys(config.entry).forEach(function (name,i) {
     config.entry[name]=extras.concat(config.entry[name])
 })
 //todo
+
+config.module.loaders.push({
+    test: /\.css$/,
+    loaders:['style-loader',
+        'css-loader?modules&sourceMap&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+        'postcss-loader']
+})
 config.output.publicPath ='/'
 config.plugins = (config.plugins || []).concat([
     // https://github.com/glenjamin/webpack-hot-middleware#installation--usage
