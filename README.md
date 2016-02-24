@@ -1,7 +1,7 @@
 
-# Frontend Boilerplate
+# React Boilerplate
 
-A boilerplate of things that mostly shouldn't exist.
+A boilerplate of PuTao FrontEnd
 
 ## Contains
 
@@ -16,7 +16,7 @@ A boilerplate of things that mostly shouldn't exist.
 - [x] [React Router Redux](https://github.com/rackt/react-router-redux)
 - [x] [Redux DevTools Extension](https://github.com/zalmoxisus/redux-devtools-extension)
 - [ ] Redux effects
-- [x] TodoMVC example
+- [ ] Redux DevTools
 
 ## Setup
 
@@ -32,8 +32,7 @@ $ npm start
 
 ## Note
 
-This is just my personal boilerplate, it may or may not be a good fit for your project(s).
+* todo
 
 # License
-
 MIT
