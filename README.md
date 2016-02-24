@@ -18,6 +18,37 @@ A boilerplate of PuTao FrontEnd
 - [ ] Redux effects
 - [ ] Redux DevTools
 
+
+### Folder Structure
+```bash
+.
+├── LICENSE
+├── Readme.md
+├── client
+│   ├── actions
+│   ├── assets
+│   ├── components
+│   ├── constants
+│   ├── containers
+│   ├── index.html
+│   ├── index.js
+│   ├── middleware
+│   ├── reducers
+│   └── store
+├── devServer.js
+├── directoryList.md
+├── dist
+│   ├── index.html
+│   └── static
+├── mddir.js
+├── package.json
+├── webpack.config.base.js
+├── webpack.config.dev.js
+└── webpack.config.prod.js
+
+
+```
+
 ## Setup
 
 ```
